@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AutomateActivity">
+    
+    <dev.olaore.blendmodes.AnimateDrawPorterDuffView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/dragon_cloud_animate_porter_duff_view"
+        android:padding="16dp"
+        app:dstImage="@drawable/cloud"
+        app:srcImage="@drawable/dragon"
+        android:layout_height="@dimen/view_height"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <dev.olaore.blendmodes.AnimateDrawPorterDuffView
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/angel_cloud_animate_porter_duff_view"
+        android:padding="16dp"
+        app:dstImage="@drawable/angel"
+        app:srcImage="@drawable/cloud2"
+        android:layout_height="@dimen/view_height"/>
+
+</LinearLayout>

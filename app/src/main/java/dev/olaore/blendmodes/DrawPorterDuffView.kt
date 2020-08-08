@@ -7,7 +7,7 @@ import android.text.TextPaint
 import android.util.AttributeSet
 import android.view.View
 
-class DrawPorterDuffView @JvmOverloads
+open class DrawPorterDuffView @JvmOverloads
     constructor(
         private val ctx: Context, private val attributeSet: AttributeSet? = null, private val defStyleAttr: Int = 0
     ): View(ctx, attributeSet, defStyleAttr) {
@@ -17,7 +17,7 @@ class DrawPorterDuffView @JvmOverloads
     private var srcImage = R.drawable.pigeon
     private var dstImage = R.drawable.balloon
 
-    val fullRect by lazy { Rect(0, 0, width, height) }
+    private val fullRect by lazy { Rect(0, 0, width, height) }
 
     var mode: PorterDuff.Mode = PorterDuff.Mode.CLEAR
         set(value) {
